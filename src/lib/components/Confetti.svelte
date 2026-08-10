@@ -78,7 +78,7 @@
       }
 
       function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx!.clearRect(0, 0, canvas.width, canvas.height);
 
         for (let i = particles.length - 1; i >= 0; i--) {
           const p = particles[i];
@@ -92,9 +92,9 @@
             continue;
           }
 
-          ctx.globalAlpha = p.life;
-          ctx.fillStyle = p.color;
-          ctx.fillRect(p.x, p.y, 10, 10);
+          ctx!.globalAlpha = p.life;
+          ctx!.fillStyle = p.color;
+          ctx!.fillRect(p.x, p.y, 10, 10);
         }
 
         if (particles.length > 0) {
