@@ -4,6 +4,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import path from 'path';
 
 export default defineConfig({
+  base: '/quest-craft',
   plugins: [
     svelte({
       preprocess: sveltePreprocess()
